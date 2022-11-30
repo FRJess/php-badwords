@@ -16,15 +16,23 @@ $badword = $_POST['badword'];
 
 <body>
 
-<div>
-  Il tuo testo è il seguente: </br>
-  <?php echo $text ?>
-</div>
-<div>
-  La tua parola da censurare è: </br>
-  <?php echo $badword ?>
-</div>
+  <div>
+    Il tuo testo è il seguente: </br>
+    <?php echo $text ?>
+  </div></br>
+  <div>
+    La tua parola da censurare è: </br>
+    <?php echo $badword ?>
+  </div></br>
 
-  
+  <div>
+    Il tuo testo è il seguente: </br>
+    <?php echo str_replace($badword, '***', $text); ?>
+  </div></br>
+  <div>
+    Il tuo testo lungo: 
+    <?php echo strlen($text)?> caratteri
+  </div></br>
+
 </body>
 </html>
